@@ -1,0 +1,18 @@
+<mat-sidenav-container class='app-drawer-container'>
+  <mat-sidenav #sidenav mode="side" [(opened)]="this.opened" style="position: fixed;">
+    <mat-list>
+      <app-nav-elem name="First bookmark" (click)="scrollTo(Anchor1)"></app-nav-elem>
+      <app-nav-elem name="Second bookmark" (click)="scrollTo(Anchor2)"></app-nav-elem>
+      <app-nav-elem name="Third bookmark" (click)="scrollTo(Anchor3)"></app-nav-elem>
+      <app-nav-elem name="Fourth bookmark" (click)="scrollTo(Anchor4)"></app-nav-elem>
+      <app-nav-elem name="Fifth bookmark" (click)="scrollTo(Anchor5)"></app-nav-elem>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div #Anchor1 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgb(190, 255, 10);">First element</div>
+    <div #Anchor2 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: coral;">Second</div>
+    <div #Anchor3 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgb(62, 202, 245);">Third</div>
+    <div #Anchor4 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: darkorchid;">Fourth</div>
+    <div #Anchor5 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgba(255, 250, 240, 0.767);">Fifth</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
