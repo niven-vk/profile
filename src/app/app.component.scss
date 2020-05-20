@@ -1,8 +1,45 @@
-mat-toolbar{
+$menu-height: 8vh;
+
+mat-toolbar {
   position: fixed;
-      z-index: 2;
-      height: 8%;
+  z-index: 3;
+  height: $menu-height;
 }
-router-outlet{
-  padding-top:8%;
+
+.main-menu-button {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.menu-height {
+  height: $menu-height;
+}
+
+.circular-menu-button {
+  height: $menu-height;
+  width: $menu-height;
+}
+
+mat-sidenav {
+  position: fixed;
+  z-index: 3;
+  top: $menu-height;
+  width: 50%;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+}
+
+.small-screen-host>* {
+  height: $menu-height;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#router-aligner {
+  height: $menu-height;
 }

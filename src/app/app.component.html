@@ -1,17 +1,32 @@
   <mat-toolbar class="toolbar">
-    <button mat-icon-button class="toolbar__icon-button" (click)="toggleSidenav()">
+    <button mat-icon-button class="circular-menu-button" (click)="toggleSidenav()">
       <mat-icon>bookmarks</mat-icon>
     </button>
-    <button mat-button>
-      About me
-    </button>
-    <button mat-button>
-      Hobbies
-    </button>
-    <button mat-button>
-      Contact
+    <div fxFlex class="menu-height" fxHide.lt-md="true">
+      <div fxFlex></div>
+      <button mat-button class="main-menu-button"> About me </button>
+      <button mat-button class="main-menu-button"> Hobbies </button>
+      <button mat-button class="main-menu-button"> Contact </button>
+      <button mat-button class="main-menu-button"> One more </button>
+      <div fxFlex></div>
+    </div>
+    <div class="circular-menu-button"></div>
+    <button mat-icon-button class="circular-menu-button right" fxHide.gt-sm="true" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
-  <div style="height:8%"></div>
-  <router-outlet></router-outlet>
-
+  <div id="router-aligner"></div>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav class="side-menu" color="primary" fxLayout="column" mode="over" opened="false"
+      fxHide.gt-sm="true" position="end">
+      <div class="small-screen-host">
+        <h1 mat-button routerLink="/about-me"> About me </h1>
+        <h1 mat-button routerLink="/hobbies"> Hobbies </h1>
+        <h1 mat-button routerLink="/contact"> Contact </h1>
+        <h1 mat-button routerLink="/contact"> One more </h1>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
