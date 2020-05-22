@@ -1,0 +1,44 @@
+.wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#image {
+  border-radius: 100%;
+  object-fit: contain;
+  width: 60vh;
+  max-width: 65%;
+}
+
+#text>h1 {
+  font-family: "Georgia", serif;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.first {
+  background-color: rgb(224, 235, 243);
+}
+
+.second {
+  background-color: #C2B9B0;
+}
+
+.third {
+  background-color: #7E685A;
+  color: white;
+}
+
+.fourth {
+  background-color: #AFD275;
+}
+
+.fifth {
+  background-color: #E7717D;
+}

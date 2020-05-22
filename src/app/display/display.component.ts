@@ -12,8 +12,8 @@ export class DisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public scrollTo($elementId: any): void {
-    $elementId.scrollIntoView({behavior: "smooth", block: "center", duration: 999999999})
+  public scrollTo(elementId: any): void {
+    elementId.scrollIntoView({behavior: "smooth", block: "center"});
   }
   
 }

@@ -1,18 +1,32 @@
-<mat-sidenav-container class='app-drawer-container'>
-  <mat-sidenav #sidenav mode="side" [(opened)]="this.opened" style="position: fixed;" >
-    <mat-list >
-      <app-nav-elem  name="First bookmark" (click)="scrollTo(Anchor1)"></app-nav-elem>
-      <app-nav-elem  name="Second bookmark" (click)="scrollTo(Anchor2)"></app-nav-elem>
-      <app-nav-elem  name="Third bookmark" (click)="scrollTo(Anchor3)"></app-nav-elem>
-      <app-nav-elem  name="Fourth bookmark" (click)="scrollTo(Anchor4)"></app-nav-elem>
+<mat-sidenav-container class='app-drawer-container' [hasBackdrop]="false">
+  <mat-sidenav #sidenav mode="side" [(opened)]="this.opened" style="position: fixed;">
+    <mat-list>
+      <app-nav-elem name="First bookmark" (click)="scrollTo(Anchor1)"></app-nav-elem>
+      <app-nav-elem name="Second bookmark" (click)="scrollTo(Anchor2)"></app-nav-elem>
+      <app-nav-elem name="Third bookmark" (click)="scrollTo(Anchor3)"></app-nav-elem>
+      <app-nav-elem name="Fourth bookmark" (click)="scrollTo(Anchor4)"></app-nav-elem>
       <app-nav-elem name="Fifth bookmark" (click)="scrollTo(Anchor5)"></app-nav-elem>
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div #Anchor1 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgb(190, 255, 10);">First element</div>
-    <div #Anchor2 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: coral;">Second</div>
-    <div #Anchor3 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgb(62, 202, 245);">Third</div>
-    <div #Anchor4 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: darkorchid;">Fourth</div>
-    <div #Anchor5 style="text-align: center; vertical-align: middle; line-height: 400px; background-color: rgba(255, 250, 240, 0.767);">Fifth</div>
+    <app-item-overview #Anchor1 [status]=1 [title]="'First Title'">
+      stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został
+      po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków
+      później
+      zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach
+      60.
+      XX w. wraz z publikacją arkuszy Letrasetu.
+    </app-item-overview>
+    <app-item-overview #Anchor2 [status]=2>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
+      przemyśle poligraficznym.</app-item-overview>
+    <app-item-overview #Anchor3 [status]=3>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
+      przemyśle poligraficznym.</app-item-overview>
+    <app-item-overview #Anchor4 [status]=4>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
+      przemyśle poligraficznym.</app-item-overview>
+    <app-item-overview #Anchor5 [status]=5>
+      <app-item-overview #Anchor6 [status]=6>
+        <app-item-overview #Anchor7 [status]=7>Lul</app-item-overview>
+      </app-item-overview>
+    </app-item-overview>
   </mat-sidenav-content>
 </mat-sidenav-container>

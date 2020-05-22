@@ -20,6 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavElemComponent } from './nav-elem/nav-elem.component';
 import { DisplayComponent } from './display/display.component';
+import { ItemOverviewComponent } from './item-overview/item-overview.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DisplayComponent } from './display/display.component';
     AppComponent,
     HomeComponent,
     NavElemComponent,
-    DisplayComponent
+    DisplayComponent,
+    ItemOverviewComponent
   ],
   imports: [
     BrowserModule,
