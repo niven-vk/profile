@@ -3,4 +3,9 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+mat-sidenav {
+    position: fixed;
+    top: 8vh;
+    background-color: green;
+  }
 

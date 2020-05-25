@@ -1,32 +1,32 @@
   <mat-toolbar class="toolbar">
-    <button mat-icon-button class="circular-menu-button" (click)="toggleSidenav()">
+    <button mat-icon-button class="circular-menu-button" [ngClass]="{'active-link': this.sidenavService.isOpened}" (click)="toggleSidenav()">
       <mat-icon>bookmarks</mat-icon>
     </button>
     <div fxFlex class="menu-height" fxHide.lt-md="true">
       <div fxFlex></div>
-      <button mat-button class="main-menu-button"> About me </button>
-      <button mat-button class="main-menu-button"> Hobbies </button>
-      <button mat-button class="main-menu-button"> Contact </button>
-      <button mat-button class="main-menu-button"> One more </button>
+      <a mat-button routerLink="/coding" routerLinkActive="active-link"> Coding </a>
+      <a mat-button routerLink="/hobbies" routerLinkActive="active-link"> Hobbies </a>
+      <a mat-button routerLink="/contact" routerLinkActive="active-link"> Contact </a>
+      <a mat-button routerLink="/github" routerLinkActive="active-link"> Github </a>
       <div fxFlex></div>
     </div>
     <div class="circular-menu-button"></div>
-    <button mat-icon-button class="circular-menu-button right" fxHide.gt-sm="true" (click)="sidenav.toggle()">
+    <button mat-icon-button class="circular-menu-button right" fxHide.gt-sm="true" (click)="mainMenu.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar>
-  <div id="router-aligner"></div>
+  <div class="menu-height"></div>
   <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav class="side-menu" color="primary" fxLayout="column" mode="over" opened="false"
+    <mat-sidenav #mainMenu class="side-menu" color="primary" fxLayout="column" mode="over" opened="false"
       fxHide.gt-sm="true" position="end">
       <div class="small-screen-host">
-        <h1 mat-button routerLink="/about-me"> About me </h1>
-        <h1 mat-button routerLink="/hobbies"> Hobbies </h1>
-        <h1 mat-button routerLink="/contact"> Contact </h1>
-        <h1 mat-button routerLink="/contact"> One more </h1>
+        <a mat-button routerLink="/coding"> Coding </a>
+        <a mat-button routerLink="/hobbies"> Hobbies </a>
+        <a mat-button routerLink="/contact"> Contact </a>
+        <a mat-button routerLink="/github"> Github </a>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content style="margin-left: 5px; margin-right: 5px;">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

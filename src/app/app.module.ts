@@ -21,6 +21,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavElemComponent } from './nav-elem/nav-elem.component';
 import { DisplayComponent } from './display/display.component';
 import { ItemOverviewComponent } from './item-overview/item-overview.component';
+import { CodingComponent } from './display/coding/coding.component';
+import { ContactComponent } from './display/contact/contact.component';
+import { HobbiesComponent } from './display/hobbies/hobbies.component';
+import { GithubComponent } from './display/github/github.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { ItemOverviewComponent } from './item-overview/item-overview.component';
     HomeComponent,
     NavElemComponent,
     DisplayComponent,
-    ItemOverviewComponent
+    ItemOverviewComponent,
+    CodingComponent,
+    ContactComponent,
+    HobbiesComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,

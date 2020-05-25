@@ -10,6 +10,7 @@ export class ItemOverviewComponent implements OnInit {
   @ViewChild('wrapper') el: ElementRef;
   @Input() status: number = 1;
   @Input() title: string = "Default title";
+  @Input() image: string="https://via.placeholder.com/500x500";
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +21,7 @@ export class ItemOverviewComponent implements OnInit {
   }
 
   getClass(): string {
-    switch ((this.status + 3) % 5) {
+    switch ((this.status) % 5) {
       case 1:
         return "first";
       case 2:

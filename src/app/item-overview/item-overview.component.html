@@ -1,6 +1,6 @@
 <div #wrapper ngClass="wrapper {{this.getClass()}}" fxLayout="column" fxLayout.gt-sm={{this.getRowStatus()}}>
   <div fxFlex></div>
-  <img id="image" fxFlex="20" src="https://via.placeholder.com/500x500">
+  <img id="image" fxFlex="20" src={{image}}>
   <div id="text" fxFlex="40" fxLayout="column">
     <h1>{{title}}</h1>
     <ng-content></ng-content>

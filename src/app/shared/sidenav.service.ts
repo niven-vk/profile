@@ -5,12 +5,10 @@ import { BehaviorSubject } from 'rxjs';
 export class SidenavService {
 
   public sideNavToggleSubject: BehaviorSubject<any> = new BehaviorSubject(null);
-
-  constructor() { } 
- 
+  public isOpened: boolean = false;
 
   public toggle() {
-    return this.sideNavToggleSubject.next(null);
+    this.isOpened=!this.isOpened;
   } 
 
   logSomeMessage(msg: any) { 

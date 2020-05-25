@@ -1,0 +1,42 @@
+<mat-sidenav-container class='app-drawer-container' [hasBackdrop]="false">
+  <mat-sidenav #sidenav mode="side" [opened]="this.sidenavService.isOpened" style="position: fixed;">
+    <mat-list>
+      <app-nav-elem name="Angular" (click)="scrollTo(Anchor1)"></app-nav-elem>
+      <app-nav-elem name="Typescript" (click)="scrollTo(Anchor2)"></app-nav-elem>
+      <app-nav-elem name="HTML+CSS+JS" (click)="scrollTo(Anchor3)"></app-nav-elem>
+      <app-nav-elem name="SASS" (click)="scrollTo(Anchor4)"></app-nav-elem>
+      <app-nav-elem name="C#/Java/C++" (click)="scrollTo(Anchor5)"></app-nav-elem>
+      <app-nav-elem name="SQL" (click)="scrollTo(Anchor6)"></app-nav-elem>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-item-overview #Anchor1 [status]=1 [title]="'Angular'" [image]="'assets/angular_logo.png'">
+      stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został
+      po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków
+      później
+      zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w
+      latach
+      60.
+      XX w. wraz z publikacją arkuszy Letrasetu.
+    </app-item-overview>
+    <app-item-overview #Anchor2 [status]=2 [title]="'Typescript'" [image]="'assets/typescript_logo.png'">
+      Lorem Ipsum jest tekstem stosowanym jako
+      przykładowy
+      wypełniacz w
+      przemyśle poligraficznym.</app-item-overview>
+    <app-item-overview #Anchor3 [status]=3 [title]="'HTML+CSS+JS'" [image]="'assets/html-css-js_logo.png'">
+      Lorem Ipsum jest tekstem stosowanym jako
+      przykładowy wypełniacz w
+      przemyśle poligraficznym.
+    </app-item-overview>
+    <app-item-overview #Anchor4 [status]=4 [title]="'SASS'" [image]="'assets/sass_logo.png'">
+      Lorem Ipsum jest tekstem stosowanym jako przykładowy
+      wypełniacz w
+      przemyśle poligraficznym.
+    </app-item-overview>
+    <app-item-overview #Anchor5 [status]=5 [title]="'C#/Java/C++'" [image]="'assets/java.png'">
+    </app-item-overview>
+    <app-item-overview #Anchor6 [status]=6 [title]="'SQL'" [image]="'assets/sql.png'">
+    </app-item-overview>
+  </mat-sidenav-content>
+</mat-sidenav-container>
