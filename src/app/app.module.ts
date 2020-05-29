@@ -27,6 +27,9 @@ import { HobbiesComponent } from './display/hobbies/hobbies.component';
 import { GithubComponent } from './display/github/github.component';
 
 
+import {MatTooltipModule} from '@angular/material/tooltip'; 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +51,10 @@ import { GithubComponent } from './display/github/github.component';
     MatToolbarModule,
     MatListModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTooltipModule
+    
+
   ],
   providers: [
     SidenavService,

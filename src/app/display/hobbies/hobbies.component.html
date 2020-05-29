@@ -1,18 +1,19 @@
 <mat-sidenav-container class='app-drawer-container' [hasBackdrop]="false">
     <mat-sidenav #sidenav mode="side" [opened]="this.sidenavService.isOpened" style="position: fixed;">
       <mat-list>
-        <app-nav-elem name="Drugs" (click)="scrollTo(Anchor1)"></app-nav-elem>
-        <app-nav-elem name="Alcohol" (click)="scrollTo(Anchor2)"></app-nav-elem>
-        <app-nav-elem name="Good humor" (click)="scrollTo(Anchor3)"></app-nav-elem>
+        <app-nav-elem name="Music" (click)="scrollTo(Anchor1)"></app-nav-elem>
+        <app-nav-elem name="Gardening" (click)="scrollTo(Anchor2)"></app-nav-elem>
+        <app-nav-elem name="Digital Painting" (click)="scrollTo(Anchor3)"></app-nav-elem>
+        <app-nav-elem name="Board games" (click)="scrollTo(Anchor4)"></app-nav-elem>
+        <app-nav-elem name="Video games" (click)="scrollTo(Anchor5)"></app-nav-elem>
       </mat-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <app-item-overview #Anchor1 [status]=1+this.styleOffset [title]="'Drugs'" [image]="'assets/drugs.png'">
-
-      </app-item-overview>
-      <app-item-overview #Anchor2 [status]=2+this.styleOffset [title]="'Alcohol'" [image]="'assets/alcohol.png'"></app-item-overview>
-      <app-item-overview #Anchor3 [status]=3+this.styleOffset [title]="'Dark sense of humor'" [image]="'assets/dark_humor.jpg'"></app-item-overview>
-
+      <app-item-overview #Anchor1 [status]=1+this.styleOffset [title]="'Music'"></app-item-overview>
+      <app-item-overview #Anchor2 [status]=2+this.styleOffset [title]="'Gardening'"></app-item-overview>
+      <app-item-overview #Anchor3 [status]=3+this.styleOffset [title]="'Digital painting'"></app-item-overview>
+      <app-item-overview #Anchor4 [status]=4+this.styleOffset [title]="'Board games'"></app-item-overview>
+      <app-item-overview #Anchor5 [status]=5+this.styleOffset [title]="'Video games'"></app-item-overview>
     </mat-sidenav-content>
   </mat-sidenav-container>
   

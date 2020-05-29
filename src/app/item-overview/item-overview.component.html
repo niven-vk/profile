@@ -1,9 +1,12 @@
 <div #wrapper ngClass="wrapper {{this.getClass()}}" fxLayout="column" fxLayout.gt-sm={{this.getRowStatus()}}>
   <div fxFlex></div>
   <img id="image" fxFlex="20" src={{image}}>
+  <div fxFlex="1"></div>
   <div id="text" fxFlex="40" fxLayout="column">
     <h1>{{title}}</h1>
+
     <ng-content></ng-content>
+
   </div>
   <div fxFlex></div>
 </div>

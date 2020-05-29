@@ -10,25 +10,25 @@ mat-toolbar {
   height: $menu-height;
 }
 
-a{
+a {
   font-size: inherit;
   font-weight: 600;
   display: flex;
   align-items: center;
+
+  :focus {
+    outline: none;
+  }
 }
 
-a:focus{
-  outline: none;
-}
-
-.active-link{
+.active-link {
   background-color: rgb(226, 226, 226);
 }
 
 .circular-menu-button {
   height: $menu-height;
   width: $menu-height;
-  outline:none;
+  outline: none;
 }
 
 mat-sidenav {

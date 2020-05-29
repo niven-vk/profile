@@ -1,9 +1,13 @@
   <mat-toolbar class="toolbar">
-    <button mat-icon-button class="circular-menu-button" [ngClass]="{'active-link': this.sidenavService.isOpened}" (click)="toggleSidenav()">
+    <button [style.visibility]="(this.router.url !== '/coding') && (this.router.url !== '/hobbies')? 'hidden' : 'visible'" mat-icon-button
+      class="circular-menu-button" [ngClass]="{'active-link': this.sidenavService.isOpened}" (click)="toggleSidenav()">
       <mat-icon>bookmarks</mat-icon>
     </button>
     <div fxFlex class="menu-height" fxHide.lt-md="true">
       <div fxFlex></div>
+      <button mat-icon-button routerLink="/home" routerLinkActive="active-link" class="circular-menu-button">
+        <mat-icon>home</mat-icon>
+      </button>
       <a mat-button routerLink="/coding" routerLinkActive="active-link"> Coding </a>
       <a mat-button routerLink="/hobbies" routerLinkActive="active-link"> Hobbies </a>
       <a mat-button routerLink="/contact" routerLinkActive="active-link"> Contact </a>
@@ -20,10 +24,11 @@
     <mat-sidenav #mainMenu class="side-menu" color="primary" fxLayout="column" mode="over" opened="false"
       fxHide.gt-sm="true" position="end">
       <div class="small-screen-host">
-        <a mat-button routerLink="/coding"> Coding </a>
-        <a mat-button routerLink="/hobbies"> Hobbies </a>
-        <a mat-button routerLink="/contact"> Contact </a>
-        <a mat-button routerLink="/github"> Github </a>
+        <a mat-button routerLink="/home" routerLinkActive="active-link"> Home </a>
+        <a mat-button routerLink="/coding" routerLinkActive="active-link"> Coding </a>
+        <a mat-button routerLink="/hobbies" routerLinkActive="active-link"> Hobbies </a>
+        <a mat-button routerLink="/contact" routerLinkActive="active-link"> Contact </a>
+        <a mat-button routerLink="/github" routerLinkActive="active-link"> Github </a>
       </div>
     </mat-sidenav>
     <mat-sidenav-content style="margin-left: 5px; margin-right: 5px;">

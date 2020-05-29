@@ -1,11 +1,15 @@
 mat-sidenav {
     position: fixed;
     top: 8vh;
-    min-width: 10vw;
+    min-width: 8vw;
   }
-  app-item-overview {
+ 
+ app-item-overview {
     font-family: "Times New Roman", Times, serif;
+    text-justify: inter-ideograph;
     font-size: 1.5em;
     line-height: 1.3em;
+    width: 100px;
   }
+
   

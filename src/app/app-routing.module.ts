@@ -8,7 +8,8 @@ import { GithubComponent } from './display/github/github.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'coding', component: CodingComponent },
   { path: 'hobbies', component: HobbiesComponent },
   { path: 'contact', component: ContactComponent },
