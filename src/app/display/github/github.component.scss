@@ -2,19 +2,17 @@ div {
   width: fit-content;
 
   a {
-
+    display: flex;
     transition: all 0.3s ease;
     opacity: 0.5;
-    width: fit-content;
 
     &:hover {
       opacity: 1;
     }
 
     img {
-      height: inherit;
+      justify-content: center;
       width: 300px;
-      transition: all 0.3s ease;
     }
   }
 }
